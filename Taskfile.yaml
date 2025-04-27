@@ -1,0 +1,19 @@
+version: "3"
+
+vars:
+  BUILD_DIR: bin
+  EXECUTABLE: main
+
+tasks:
+  default:
+    cmd: task -a
+
+  build:
+    cmds:
+      - test -d {{.BUILD_DIR}} || mkdir {{.BUILD_DIR}}
+      - gcc src/main.c -o {{.BUILD_DIR}}/{{.EXECUTABLE}}
+
+  execute:
+    deps:
+      - build
+    cmd: ./{{.BUILD_DIR}}/{{.EXECUTABLE}}
