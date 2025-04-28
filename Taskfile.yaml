@@ -2,7 +2,7 @@ version: "3"
 
 vars:
   BUILD_DIR: bin
-  EXECUTABLE: main
+  EXECUTABLE: cwc
 
 tasks:
   default:
