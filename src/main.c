@@ -19,7 +19,7 @@ int main()
             ++lines;
         }
 
-        if (c == ' ' || c == '\n' || c == '\t')
+        if (c == ' ' || c == '\t' || c == '\n')
         {
             state = OUT;
         }
