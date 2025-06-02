@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 
 #define IN 1
 #define OUT 0
@@ -19,7 +20,7 @@ int main()
             ++lines;
         }
 
-        if (c == ' ' || c == '\t' || c == '\n')
+        if (isspace(c))
         {
             state = OUT;
         }
